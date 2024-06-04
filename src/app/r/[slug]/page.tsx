@@ -32,6 +32,9 @@ const SubRedditPage = async ({ params }: SubRedditPageProps) => {
 
                 take: INFINITE_SCROLLLING_PAGINATION_RESULTS
             }
+        },
+        orderBy : {
+            createdAt : 'desc'
         }
     });
 
