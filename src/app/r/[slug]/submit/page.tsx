@@ -35,11 +35,11 @@ const SubmitPage = async ({ params }: { params: { slug: string } }) => {
             {/* form */}
             <Editor subredditId={subreddit.id} />
 
-            <div className='w-full flex justify-end'>
+            {/* <div className='w-full flex justify-end'>
                 <Button type='submit' className='w-full' form='subreddit-post-form'>
                     Post
                 </Button>
-            </div>
+            </div> */}
         </div>
 
     )

@@ -11,6 +11,7 @@ import { toast } from '@/hooks/use-toast';
 import { useMutation } from '@tanstack/react-query';
 import axios from 'axios';
 import { usePathname, useRouter } from 'next/navigation';
+import { Button } from './ui/Button';
 
 interface EditorProps {
     subredditId: string
@@ -134,7 +135,7 @@ const Editor: FC<EditorProps> = ({ subredditId }) => {
 
     const { ref: titleRef, ...rest } = register("title");
 
-    const { mutate : createPost} = useMutation({
+    const { mutate : createPost, isLoading} = useMutation({
         mutationFn: async ({ title, content, subredditId }: PostCreationRequest) => {
             const payload: PostCreationRequest = {
                 title,
@@ -178,6 +179,7 @@ const Editor: FC<EditorProps> = ({ subredditId }) => {
 
 
     return (
+        <>
         <div className='w-full p-4 bg-zinc-50 rounded-lg border border-zinc-200'>
             <form
                 id='subreddit-post-form'
@@ -206,6 +208,13 @@ const Editor: FC<EditorProps> = ({ subredditId }) => {
                 </div>
             </form>
         </div>
+
+        <div className='w-full flex justify-end'>
+                <Button isLoading={isLoading} type='submit' className='w-full' form='subreddit-post-form'>
+                    Post
+                </Button>
+            </div>
+        </>
     )
 }
 

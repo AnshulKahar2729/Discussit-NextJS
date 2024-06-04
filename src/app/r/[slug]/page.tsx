@@ -1,4 +1,5 @@
 import MiniCreatePost from '@/components/MiniCreatePost';
+import PostFeed from '@/components/PostFeed';
 import { INFINITE_SCROLLLING_PAGINATION_RESULTS } from '@/config';
 import { getAuthSession } from '@/lib/auth';
 import { db } from '@/lib/db';
@@ -51,10 +52,7 @@ const SubRedditPage = async ({ params }: SubRedditPageProps) => {
                 r/{subreddit.name}
             </h1>
             <MiniCreatePost session={session} />
-            {/* <PostFeed initialPosts={subreddit.posts} subredditName={subreddit.name} /> */}
-            {posts.map((post, index) => (
-                <h1 key={index}>{post?.title}</h1>
-            ))}
+            <PostFeed initalPosts={subreddit.posts} subredditName={subreddit.name} />
         </>
     )
 }

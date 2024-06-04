@@ -13,7 +13,7 @@ import { useCustomToasts } from '@/hooks/use-custom-toast';
 const SubRedditCreatePage = ({ }) => {
     const router = useRouter();
     const [input, setInput] = useState<string>('');
-    const {loginToast} = useCustomToasts();
+    const { loginToast } = useCustomToasts();
 
     const { mutate: createCommunity, isLoading } = useMutation({
         mutationFn: async () => {
