@@ -37,9 +37,9 @@ const PostVoteServer = async ({ postId, initalVotesAmt, initialVote, getData }: 
     }
 
     return (
-        <PostVoteClient postId={postId} initialVotesAmt={_votesAmt} initialVote={_currentVote}>
+        <PostVoteClient postId={postId} initialVotesAmt={_votesAmt} initialVote={_currentVote}/>
 
-        </PostVoteClient>
+        
     )
 }
 

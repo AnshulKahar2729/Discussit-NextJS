@@ -4,7 +4,7 @@ import { INFINITE_SCROLLLING_PAGINATION_RESULTS } from '@/config';
 import { getAuthSession } from '@/lib/auth';
 import { db } from '@/lib/db';
 import { notFound } from 'next/navigation';
-import React, { FC } from 'react'
+import React from 'react'
 
 interface SubRedditPageProps {
     params: {
