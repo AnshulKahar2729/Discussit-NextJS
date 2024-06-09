@@ -6,8 +6,8 @@ import '@/styles/globals.css'
 import { Inter } from "next/font/google"
 
 export const metadata = {
-  title: 'Breadit',
-  description: 'A Reddit clone built with Next.js and TypeScript.',
+  title: 'DiscussIt',
+  description: 'Share your thoughts in a safe and respectful environment.',
 }
 
 const inter = Inter({ subsets: ['latin'] })

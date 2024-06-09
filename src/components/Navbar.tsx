@@ -4,6 +4,8 @@ import { buttonVariants } from "./ui/Button"
 import { getAuthSession } from "@/lib/auth"
 import UserAccountNav from "./UserAccountNav"
 import SearchBar from "./SearchBar"
+import logo  from "../../public/favicon.ico"
+import Image from "next/image"
 
 const Navbar = async () => {
     const session = await getAuthSession();
@@ -13,8 +15,9 @@ const Navbar = async () => {
 
                 {/* logo and text */}
                 <Link href='/' className='flex gap-2 items-center'>
-                    <Icons.logo className=" h-8 w-8 sm:h-6 sm:w-6" />
-                    <p className='hidden text-zinc-700 text-sm font-medium md:block'>Breadit</p>
+                    {/* <Icons.logo className=" h-8 w-8 sm:h-6 sm:w-6" /> */}
+                    <Image src={logo} alt="" className=" h-8 w-8 sm:h-6 sm:w-6"  />
+                    <p className='hidden text-zinc-700 text-sm font-medium md:block'>DiscussIt</p>
                 </Link>
 
                 {/* searchbar  */}
